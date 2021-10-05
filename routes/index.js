@@ -17,8 +17,8 @@ router.get('/about', function(req, res, next) {
 });
 
 /* GET Products page. */
-router.get('/products', function(req, res, next) {
-  res.render('index', { title: 'Products'});
+router.get('/projects', function(req, res, next) {
+  res.render('index', { title: 'Projects'});
 });
 
 /* GET Services page. */
@@ -26,9 +26,9 @@ router.get('/services', function(req, res, next) {
   res.render('index', { title: 'Services'});
 });
 
-/* GET Contact Us page. */
+/* GET Contact Me page. */
 router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Contact Us'});
+  res.render('contact', { title: 'Contact Me'});
 });
 
 module.exports = router;

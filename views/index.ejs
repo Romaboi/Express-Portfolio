@@ -1,16 +1,46 @@
 <%- include partials/header.ejs %> 
 
 <%- include partials/main_nav.ejs %>
-
-
   
-
   <!--Main Content-->
   <main class="container">
-  <div class="h-100 p-5 bg-light border rounded-3">
-    <h1>Welcome to the <%= title %> Page</h1>
-    <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-    <button class="btn btn-outline-secondary" type="button">Example button</button>
+  <div class="h-100 p-5 bg-light border rounded-3" style="overflow: hidden">
+    <h1><%= title %> Page</h1>
+    <br>
+    <% if (title == "Home") { %>
+    <h6>Welcome to my Express Portfolio! I know it doesn't look like much now, but that'll soon change!</h6>
+    <p>This is just the beginning of my long journey of becoming a better software engineer, and any support I can get is welcome!</p>
+    <br>
+    <button class="btn btn-outline-secondary" type="button" onclick="window.location.href='/about'">Learn more about me!</button>
+    <% } else if (title == "About") { %>
+      <img src="/Assets/images/about_profile.jpg" class="img-fluid" alt="profile picture"><br>
+      <p class="lead">
+        Hey There!
+      </p> 
+      <p>My name is Roman Gagarin, and I'm a student at Centennial College. 
+        I am currently studying in the Software Engineering Technology - AI program, and so far I am loving it!
+        It took me a little while to find my way to programming in general, but it's been a great time anyways. 
+        I love to learn new skills, despite how frustrating it can be at times, and hope to continue expanding my
+        knowledge in this field and others as well!</p><br>
+        <a href="/Assets/downloads/Resume (Student).pdf" download="Roman Gagarin Resume.pdf">Check out my Resume!</a>
+        
+        <% } else if (title == "Projects") { %>
+          <img src="/Assets/images/drumkit.png" class="rounded float-start" alt="drumkit" width="300px"><img src="/Assets/images/eye-drawing.png" class="rounded float-end" alt="drawing" width="300px"><br>
+          <p>I don't have any active programming projects to showcase here just yet, but like I mentioned in my about page,
+            I do like to learn new skills! Currently I am practicing the drums, which I started a few months ago. I'm also 
+            teaching myself to draw and sketch, and slowly learning unity to potentially make my own game in the future!
+            Besides that, I enjoy martial arts, and use that as a form of exercise on my weight loss journey!
+          </p><br>        
+          <% } else if (title == "Services") { %>
+            <div class="float-start" ><img src="/Assets/images/flair.jpg" class="rounded float-start" alt="drumkit" width="300px"></div>
+            <p>Some of the services I could currently provide for people would likely have to do with a few things I learned in my life so far. 
+              Things I'm most comfortable providing is bartending (flair bartending included) and being a Game Master for a Dungeons and Dragons 
+              Campaign! I'm well on my way to add other services to my repetoire, but everyone's gotta start somewhere, right?
+            </p><br>        
+          <% } %> 
+
+    
+    
   </div>
 </main>
 

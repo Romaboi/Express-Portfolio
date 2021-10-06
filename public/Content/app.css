@@ -1,1 +1,10 @@
 /* custom css goes here */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 5px;
+    padding: 5px;
+    object-fit: contain;
+    border-radius: 5px;
+  }
+  

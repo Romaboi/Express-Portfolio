@@ -9,7 +9,3 @@
     window.addEventListener('load', Start);
     
 })();
-
-/*document.getElementById("submit").addEventListener('onclick', function(){
-    window.location.href="/home";
-})*/

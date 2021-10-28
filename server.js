@@ -1,10 +1,17 @@
 #!/usr/bin/env node
 
+/* 
+File name: server.js
+Student Name: Roman Gagarin
+Student #: 300866285
+Date: October 18th, 2021
+*/
+
 /**
  * Module dependencies.
  */
 
-let app = require('./app');
+let app = require('./server/config/app');
 let debug = require('debug')('express-portfolio:server');
 let http = require('http');
 
